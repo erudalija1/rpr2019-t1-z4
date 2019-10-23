@@ -2,15 +2,14 @@ package ba.unsa.etf.rpr;
 
 public class Korpa {
 
-    Artikl[] a = new Artikl [50];
-
+    Artikl a[] = new Artikl [50];
     Artikl[] getArtikli () {
         return a;
     }
 
     int dajUkupnuCijenuArtikala () {
 
-        private int suma = 0;
+        int suma = 0;
         for (int i = 0; i < 50; i++) {
             suma += a[i].getCijena();
         }
@@ -25,11 +24,11 @@ public class Korpa {
         return null;
     }
 
-    boolean dodajArtikl (Artikl a) {
+    boolean dodajArtikl (Artikl ar) {
 
         for (int i = 0; i < 50; i++) {
             if (a[i] == null) {
-                a[i] = a;
+                a[i] = ar;
                 return true;
             }
         }
