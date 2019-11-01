@@ -7,6 +7,9 @@ public class Korpa {
         return a;
     }
 
+    public Korpa() {
+    }
+
     int dajUkupnuCijenuArtikala () {
 
         int suma = 0;

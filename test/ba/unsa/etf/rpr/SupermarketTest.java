@@ -6,11 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SupermarketTest {
 
-    private Supermarket supermarket;
-    private Artikl artikal;
+    static private Supermarket supermarket;
+    static private Artikl artikal;
 
     @BeforeAll
-    void setUp () {
+    static void setUp () {
 
         supermarket =  new Supermarket ();
         artikal = new Artikl ("Set magneta", 2, "3258");
@@ -22,17 +22,14 @@ class SupermarketTest {
         supermarket.dodajArtikl(artikal);
 
         Artikl a0 = supermarket.izbaciArtiklSaKodom("150");
-        assertNull(a0.getKod());
+        assertNull(a0);
 
         Artikl a = supermarket.izbaciArtiklSaKodom("3258");
-        assertEquals (3258, artikal.getKod());
+        assertEquals ("3258", artikal.getKod());
     }
 
-    @Test
-    void dodajArtiklTest () {
 
 
-    }
 
 
 
